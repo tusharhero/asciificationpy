@@ -1,4 +1,6 @@
-def createblankimg(x, y):
+def createblankimg(
+    x, y
+):  # the image is just a list of list of spaces forming a grid of spaces
     ilist = list(" " * x)
     image = []
     for n in range(y):
