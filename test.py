@@ -1,6 +1,7 @@
-import asciishow as asc
+import asciiplotter as ascp
+import asciirenderer as asc
 
-image = asc.plotequation(input("input the equation(python syntax):  "))
+image = ascp.plot(input("input the equation(python syntax):  "))
 print()
 
 asc.printimage(image)
