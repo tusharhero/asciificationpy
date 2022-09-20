@@ -1,3 +1,4 @@
 #python
 
-./__pycache__/
+__pycache__/asciiplotter.cpython-310.pyc
+__pycache__/asciirenderer.cpython-310.pyc
