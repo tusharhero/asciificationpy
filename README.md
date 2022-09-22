@@ -38,3 +38,30 @@ asc.printimage(image)
 ⬛⬛⬛⬛⬛⬛⬛⬛⬛⬛
 ⬛⬛⬜⬛⬛⬛⬛⬛⬜⬛
 ```
+
+- circle
+
+`code:`
+```py
+import asciiplotter as ascp
+import asciirenderer as asc
+
+image = ascp.plot("(x-5)**2 + (y-5)**2 <= 3.2**2", img=asc.createblankimg(10, 10))
+
+asc.printimage(image)
+```
+
+`output:`
+
+```
+⬛⬛⬛⬛⬛⬛⬛⬛⬛⬛
+⬛⬛⬛⬛⬛⬛⬛⬛⬛⬛
+⬛⬛⬛⬛⬜⬜⬜⬛⬛⬛
+⬛⬛⬛⬜⬜⬜⬜⬜⬛⬛
+⬛⬛⬜⬜⬜⬜⬜⬜⬜⬛
+⬛⬛⬜⬜⬜⬜⬜⬜⬜⬛
+⬛⬛⬜⬜⬜⬜⬜⬜⬜⬛
+⬛⬛⬛⬜⬜⬜⬜⬜⬛⬛
+⬛⬛⬛⬛⬜⬜⬜⬛⬛⬛
+⬛⬛⬛⬛⬛⬛⬛⬛⬛⬛
+```
