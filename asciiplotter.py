@@ -1,6 +1,7 @@
 import asciirenderer as asc
 import math
 
+
 def plot(equation, img=asc.createblankimg(100, 100), white="⬜", black="⬛"):
     for y in range(len(img)):  # iterate through the y-axis
         for x in range(

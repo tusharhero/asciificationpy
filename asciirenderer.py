@@ -13,8 +13,3 @@ def printimage(image):
         for m in n:
             print(m, end="")
         print()
-
-
-def coor(image, coor):
-    color = image[coor[1]][0]
-    return color
