@@ -25,8 +25,4 @@ def ascii2cart(x, y, img):
 
 
 def cart2ascii(x, y, img):
-    length_y = len(img[0])
-    length_x = len(img[0][0])
-    y = -y + length_y // 2
-    x = x + length_x // 2
-    return x, y
+    return ascii2cart(x, y, img)
