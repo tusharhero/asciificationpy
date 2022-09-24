@@ -6,7 +6,7 @@ def plot(equation, img=asc.createblankimg(100, 100), white="⬜", black="⬛"):
     for coor in getrange(img):
         x = coor[0]
         y = coor[1]
-        nx , ny = cart2ascii(x, y, img)
+        nx, ny = cart2ascii(x, y, img)
         condition = eval(equation)
         if condition:
             img[ny][nx] = white
@@ -22,17 +22,18 @@ def getrange(img):
             ran.append(ascii2cart(x, y, img))
     return ran
 
+
 def ascii2cart(x, y, img):
     length_y = len(img)
     length_x = len(img[0])
-    y = -y + length_y // 2
-    x = x + length_x // 2
-    return x, y
+    ny = length_y // 2 - y
+    nx = x - length_x // 2
+    return nx, ny
 
 
-def cart2ascii(x, y, img):
+def cart2ascii(nx, ny, img):
     length_y = len(img)
     length_x = len(img[0])
-    y = y - length_y // 2
-    x = x - length_x // 2
-    return x , y
+    y = length_y // 2 - ny
+    x = nx + length_x // 2
+    return x, y
