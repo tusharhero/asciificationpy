@@ -19,7 +19,7 @@ Uses `asciirenderer` to plot mathematical equations.
 import asciirenderer as asc
 import asciiplotter as ascp
 
-image = ascp.plot("y == (x-5)**2", img= asc.createblankimg(10,10))
+image = ascp.plot("y == (x)**2", img= asc.createblankimg(10,10))
 
 asc.printimage(image)
 ```
@@ -27,16 +27,16 @@ asc.printimage(image)
 `output:`
 
 ```
-⬛⬛⬛⬛⬛⬜⬛⬛⬛⬛
-⬛⬛⬛⬛⬜⬛⬜⬛⬛⬛
-⬛⬛⬛⬛⬛⬛⬛⬛⬛⬛
 ⬛⬛⬛⬛⬛⬛⬛⬛⬛⬛
 ⬛⬛⬛⬜⬛⬛⬛⬜⬛⬛
 ⬛⬛⬛⬛⬛⬛⬛⬛⬛⬛
 ⬛⬛⬛⬛⬛⬛⬛⬛⬛⬛
+⬛⬛⬛⬛⬜⬛⬜⬛⬛⬛
+⬛⬛⬛⬛⬛⬜⬛⬛⬛⬛
 ⬛⬛⬛⬛⬛⬛⬛⬛⬛⬛
 ⬛⬛⬛⬛⬛⬛⬛⬛⬛⬛
-⬛⬛⬜⬛⬛⬛⬛⬛⬜⬛
+⬛⬛⬛⬛⬛⬛⬛⬛⬛⬛
+⬛⬛⬛⬛⬛⬛⬛⬛⬛⬛
 ```
 
 - circle
@@ -46,7 +46,7 @@ asc.printimage(image)
 import asciiplotter as ascp
 import asciirenderer as asc
 
-image = ascp.plot("(x-5)**2 + (y-5)**2 <= 3.2**2", img=asc.createblankimg(10, 10))
+image = ascp.plot("(x)**2 + (y)**2 <= 3.2**2", img=asc.createblankimg(10, 10))
 
 asc.printimage(image)
 ```
@@ -63,5 +63,30 @@ asc.printimage(image)
 ⬛⬛⬜⬜⬜⬜⬜⬜⬜⬛
 ⬛⬛⬛⬜⬜⬜⬜⬜⬛⬛
 ⬛⬛⬛⬛⬜⬜⬜⬛⬛⬛
+⬛⬛⬛⬛⬛⬛⬛⬛⬛⬛
+```
+
+`code:`
+```py
+import asciiplotter as ascp
+import asciirenderer as asc
+
+image = ascp.plot("(y <= 2 * math.sin(x)) and (y >= 2 * math.sin(x) - 2)", img=asc.createblankimg(10, 10))
+
+asc.printimage(image)
+```
+
+`output`
+
+```
+⬛⬛⬛⬛⬛⬛⬛⬛⬛⬛
+⬛⬛⬛⬛⬛⬛⬛⬛⬛⬛
+⬛⬛⬛⬛⬛⬛⬛⬛⬛⬛
+⬛⬛⬛⬛⬛⬛⬛⬛⬛⬛
+⬜⬜⬛⬛⬛⬛⬜⬜⬛⬛
+⬜⬜⬛⬛⬛⬜⬜⬜⬜⬛
+⬛⬛⬜⬛⬛⬜⬛⬛⬜⬛
+⬛⬛⬜⬜⬜⬜⬛⬛⬛⬜
+⬛⬛⬛⬜⬜⬛⬛⬛⬛⬜
 ⬛⬛⬛⬛⬛⬛⬛⬛⬛⬛
 ```
