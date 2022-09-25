@@ -8,8 +8,13 @@ def createblankimg(
     return image
 
 
-def printimage(image):
+def getstring(image):
+    string = ""
     for n in image:
         for m in n:
-            print(m, end="")
-        print()
+            string+=m
+        string+="\n"
+    return string
+
+def printimage(image):
+    print(getstring(image))
