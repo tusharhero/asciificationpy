@@ -10,30 +10,42 @@
     <meta property="og:image" content="https://tusharhero.github.io/asciificationpy/icon.png">
     <meta name="twitter:image:src" content="https://tusharhero.github.io/asciificationpy/icon.png" />
     <link rel="shortcut icon" type="image/ico" href="favicon.ico"/>
+    <link rel="stylesheet" href="style.min.css">
     <script src="index.py" type="text/python" defer></script>
     <script type="text/javascript" src="brython.js" defer></script>
     <script type="text/javascript" src="brython_stdlib.js" defer></script>
     <title>asciiplot</title>
 </head>
-<body onload="brython()" style="background-color: rgb(44, 44, 44); font-style: normal; color: aliceblue;">
-    <h1>
+<body onload="brython()" class=" bg-slate-900 items-center container mx-auto text-green-500 ">
+    <h1 class=" text-6xl box-content text-green-500">
         asciiplotter
     </h1>
-    <a href="https://github.com/tusharhero/asciificationpy/" style="color: grey;">github</a>
-    <form onsubmit="return false;">  
+    <br>
+    <a href="https://github.com/tusharhero/asciificationpy/" class=" text-slate-50 hover:text-green-400">github</a>
+    <form onsubmit="return false;" class=" bg-slate-700 box-content center h-28 w-56 border-2 border-green-500">  
       <fieldset>  
-        <input type = "text" id = "text-src" placeholder = "enter the equation"  autocomplete="off"/>
-        <button type = "submit" id = "submit" >Ok </button>
-        <button type = "submit" id = "clear" >Clear</button><br>
-        <input type="text" id = "size" placeholder="enter the size" value="50"> 
+        <input type = "text" id = "text-src" placeholder = "enter the equation"  autocomplete="off" value ="axes(x,y)" class="bg-slate-900 text-green-200 hover:bg-slate-600 border-1 ring-green-500 focus:scale-110 active:blur "/>
+        <input type="text" id = "size" placeholder="enter the size" value="15" class="bg-slate-900 text-green-200 hover:bg-slate-600 focus:scale-110 active:blur"> 
+        <button type = "submit" id = "submit" class=" border-4 border-green-400  h-8 w-12 rounded-lg  hover:scale-90" >Ok</button>
+        <button type = "submit" id = "clear" class="border-4 border-green-400  h-8 w-16 rounded-lg hover:scale-90" >Clear</button><br>
       </fieldset>  
     </form>
-<div id ="box" style="box-sizing: 50; width: 50px;">
-    <output id = "output" readonly style="background-color: rgb(56, 56, 56); width: fit-content;">
-        <i style="color: rgb(82, 102, 89);">output</i>
+<div id ="box" class=" self-center items-center" >
+    <output id = "output" readonly class=" items-center box-content max-w-sm" >
+        <div class="box-content max-w-3xl bg-slate-700">
+        <text class=" box-content font-light text-slate-200">
+            <br>
+        Hello! I am here to help you figure this out! I will be gone after you use the plotter.(forever 😥)
+            <br>
+        Enter the equation in a form of python equality check, i'e `==` instead of `=` and always use x and y as the variables. <br>
+        Math module is also supported.
+            <br>
+        bye! 😭
+        </text>
+        </div>
     </output>
 </div>
 <br>
-    made using <a href="https://brython.info" style="color: grey;">brython</a>
+    made using <a href="https://brython.info" class=" text-slate-50 hover:text-green-400">brython</a>
 </body>
 </html>
