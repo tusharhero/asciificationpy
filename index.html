@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="index.py" type="text/python" defer></script>
+    <script type="text/javascript" src="brython.js"></script>
+    <script type="text/javascript" src="brython_stdlib.js"></script>
+    <title>asciiplot</title>
+</head>
+<body onload="brython()">
+    <h1>
+        asciiplotter
+    </h1>
+    <a href="https://github.com/tusharhero/asciificationpy/">github</a>
+    <form onsubmit="return false;">  
+      <fieldset>  
+        <input type = "text" id = "text-src" placeholder = "enter the equation in python expression form" autocomplete="off"/>
+        <button type = "submit" id = "submit" >Ok </button>
+        <button type = "submit" id = "clear" >Clear</button> 
+      </fieldset>  
+    </form>
+    <textarea id = "output" readonly rows="50" cols="100"></textarea></body><br>
+    made using <a href="https://brython.info">brython</a>
+</body>
+</html>
