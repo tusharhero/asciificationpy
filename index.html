@@ -17,11 +17,12 @@
     <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
     <title>asciiplot</title>
 </head>
-<body onload="brython()" class=" bg-slate-900 items-center container mx-auto text-green-500 ">
-    <h1 class=" text-6xl box-content text-green-500 font-pixel">
+<body onload="brython()" class=" bg-slate-900 items-center md:container md:mx-auto mx-10 text-green-500 ">
+    <h1 class="text-3xl text-green-500 font-pixel">
         asciiplotter
     </h1>
     <br>
+    <div>
     <a href="https://github.com/tusharhero/asciificationpy/" class=" text-slate-50 hover:text-green-400">github</a>
     <form onsubmit="return false;" class=" bg-slate-700 box-content center h-28 w-56 border-2 border-green-500">  
       <fieldset>  
@@ -31,6 +32,7 @@
         <button type = "submit" id = "clear" class="border-4 border-green-400  h-8 w-16 rounded-lg hover:scale-90" >Clear</button><br>
       </fieldset>  
     </form>
+    </div>
 <div id ="box" class=" self-center items-center" >
     <output id = "output" readonly class=" items-center box-content max-w-sm" >
         <div class="box-content max-w-3xl bg-slate-700">
