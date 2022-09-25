@@ -66,6 +66,8 @@ asc.printimage(image)
 ⬛⬛⬛⬛⬛⬛⬛⬛⬛⬛
 ```
 
+- sine function
+ 
 `code:`
 ```py
 import asciiplotter as ascp

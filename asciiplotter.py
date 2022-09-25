@@ -37,3 +37,12 @@ def cart2ascii(nx, ny, img):
     y = length_y // 2 - ny
     x = nx + length_x // 2
     return x, y
+
+def axes(x,y):
+    return ((y == 0) or (x == 0))
+
+def point(a,b,x,y):
+    return (x == a and y == b)
+
+def circle(x,y,r = 1 ,a = 0 ,b = 0):
+    return ((x-a)**2 + (y-b)**2 <= r**2)
