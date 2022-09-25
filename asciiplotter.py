@@ -39,7 +39,7 @@ def cart2ascii(nx, ny, img):
     return x, y
 
 def axes(x,y):
-    return ((y == 0) or (x == 0))
+    return (not (x and y))
 
 def point(a,b,x,y):
     return (x == a and y == b)
