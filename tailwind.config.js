@@ -364,6 +364,7 @@ module.exports = {
         '"Noto Color Emoji"',
       ],
       serif: ['ui-serif', 'Georgia', 'Cambria', '"Times New Roman"', 'Times', 'serif'],
+      pixel: ['"Press Start 2P"'],
       mono: [
         'ui-monospace',
         'SFMono-Regular',
