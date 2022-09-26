@@ -1,8 +1,5 @@
 function start()
 {
-    const eqt = document.getElementById('-eqt');
-    const size = document.getElementById('-size');
-    
     const { searchParams } = new URL(window.location.href);
     
     const inURL =
@@ -13,8 +10,11 @@ function start()
         
     if (inURL.eqt !== null && inURL.size !== null)
     {
-        eqt.value = inURL.eqt;
-        size.value = inURL.size;
+        document.getElementById('-eqt').value = inURL.eqt;
+        document.getElementById('text-src').value = inURL.eqt;
+
+        document.getElementById('-size').value = inURL.size;
+        document.getElementById('size').value = inURL.size;
     }
 };
 
