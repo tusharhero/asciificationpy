@@ -10,8 +10,8 @@ function start()
         
     if (inURL.eqt !== null && inURL.size !== null)
     {
-        document.getElementById('-eqt').value = inURL.eqt;
-        document.getElementById('text-src').value = inURL.eqt;
+        document.getElementById('-eqt').value = inURL.eqt.split('plus').join('+');
+        document.getElementById('text-src').value = inURL.eqt.split('plus').join('+');
 
         document.getElementById('-size').value = inURL.size;
         document.getElementById('size').value = inURL.size;
@@ -25,7 +25,7 @@ function submit()
     eqt = document.getElementById('text-src').value;
     size = document.getElementById('size').value;
 
-    const param = `?eqt=${eqt}&size=${size}`;
+    const param = `?eqt=${eqt.split('+').join('plus')}&size=${size}`;
 
     window.history.replaceState('', '', param);
 };
