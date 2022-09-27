@@ -7,7 +7,6 @@ def getequation(evt):
     try:
         size = int(document["size"].value)
         graph = asc.getstring(ascp.plot(equation, img=asc.createblankimg(size, size)))
-        start = time()
         document["error"].html = "$ checking"
         document["box"].width = size
         document["output"].value = graph
