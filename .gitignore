@@ -1007,3 +1007,4 @@ docs/node_modules/yaml/types/omap.js
 docs/node_modules/yaml/types/pairs.js
 docs/node_modules/yaml/types/set.js
 docs/node_modules/yaml/types/timestamp.js
+.vscode/settings.json

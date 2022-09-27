@@ -19,47 +19,40 @@
     <title>asciiplot</title>
 </head>
 
-<body onload="brython()" class=" bg-slate-900 items-center md:container md:mx-auto mx-10 text-green-500 ">
-    <h1 class="text-3xl text-green-500 font-pixel">
-        asciiplotter
+<body onload="brython()" class=" bg-gradient-to-r from-slate-800 via-slate-900 to-slate-800 items-center md:container md:mx-auto mx-10 text-green-500 ">
+    <h1 class="text-3xl break-words text-green-500 font-pixel max-w-min bg-clip-text text-transparent bg-gradient-to-r from-green-400 to-green-700">
+        ascii- plotter
     </h1>
     <br>
-    <div>
+    <div class="w-80">
     <a href="https://github.com/tusharhero/asciificationpy/" class=" text-slate-50 hover:text-green-400">github</a>
-
-    <form onsubmit="return false;" class=" bg-slate-700 box-content center h-28 w-56 border-2 border-green-500 ">  
+    <form onsubmit="return false;" class=" bg-slate-700 box-content center h-28 w-72 border-2 border-green-500 ">  
       <fieldset> 
-    <span class="inline-block relative">
         <input type = "text" id = "text-src" placeholder = "enter the equation"  autocomplete="off" value ="axes(x,y)" class="bg-slate-900 text-green-200 hover:bg-slate-600 border-2 border-slate-500 ring-green-500 "/>
-        <span class="relative inline-flex rounded-full h-3 w-3 bg-white valid:bg-sky-500 invalid:bg-red-500 ">
-            <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-slate-100 valid:bg-sky-400 invalid:bg-red-400 opacity-75"></span>
-       </span>
-    </span>
-        <input type="text" id = "size" placeholder="enter the size" value="15" class="bg-slate-900 text-green-200 hover:bg-slate-600 border-2 border-slate-600 ring-green-500  "> 
+        <input type="text" id = "size" placeholder="enter the size" value="15" class="bg-slate-900 text-green-200 hover:bg-slate-600 border-2 border-slate-600 ring-green-500  "> <br>
         <button type = "submit" id = "submit" class=" border-4 border-green-400  h-8 w-12 rounded-lg  hover:scale-90" >Ok</button>
         <button type = "submit" id = "clear" class="border-4 border-green-400  h-8 w-16 rounded-lg hover:scale-90" >Clear</button><br>
       </fieldset>  
     </form>
     </div>
+    <p id="error" class="border-2 bg-black font-mono w-72 hover:scale-105 cursor-text">$ hello</p>
 <div id ="box" class=" self-center items-center" >
     <output id = "output" readonly class=" items-center box-content max-w-sm" >
         <div class="box-content max-w-3xl bg-slate-700">
-        <text class=" box-content font-light text-slate-200">
-            <br>
-        Hello! I am here to help you figure this out! I will be gone after you use the plotter.(forever 😥)
+        <text class=" box-content font-light text-slate-200 cursor-help">
+        Hello! I am asciiplotter, and I am going to help you use me! 
             <br>
         Enter the equation in a form of python equality check, i'e `==` instead of `=` and always use x and y as the variables. <br>
         Math module is also supported.
             <br>
-        bye! 😭
+        bye! I will be talking to you through the terminal 😃
         </text>
         </div>
     </output>
 </div>
 <br>
-    made using <a href="https://brython.info" class=" text-slate-50 hover:text-green-400">brython</a>
     
-
+    made using <a href="https://brython.info" class=" text-slate-50 hover:text-green-400">brython</a>, <a href="https://tailwindcss.com/" class=" text-slate-50 hover:text-green-400">tailwindcss</a>
     <input type="text" id="-eqt" value="default" style="display: none;">
     <input type="text" id="-size" value="default" style="display: none;">
 </body>
