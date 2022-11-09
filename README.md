@@ -10,6 +10,7 @@ It uses a simple 2d list to store the characters.
 
 Uses `asciirenderer` to plot mathematical equations.
 
+[Try `asciiplotter` now!](https://tusharhero.github.io/asciificationpy)
 ### some examples
 
 - a parabola
