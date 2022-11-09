@@ -6,7 +6,8 @@ def getequation(evt):
     equation = document["text-src"].value
     try:
         size = int(document["size"].value)
-        graph = asc.getstring(ascp.plot(equation, img=asc.createblankimg(size, size)))
+        scaling = float(document["scaling"].value)
+        graph = asc.getstring(ascp.plot(equation, img=asc.createblankimg(size, size), s=scaling))
         document["error"].html = "$ checking"
         document["box"].width = size
         document["output"].value = graph
@@ -21,12 +22,13 @@ def clear(evt):
 def startup():
     eqt = document["-eqt"].value
     size = document["-size"].value
+    scaling = document["-scaling"].value
 
     if eqt == 'default' or size == 'default':
         return None
 
     i = int(size)
-    graph = asc.getstring(ascp.plot(eqt, img=asc.createblankimg(i, i)))
+    graph = asc.getstring(ascp.plot(eqt, img=asc.createblankimg(i, i), s=scaling))
     document["box"].width = i
     document["output"].value = graph
     document["error"].html = "$ I am done plotting the equation shared to you!"
