@@ -22,7 +22,6 @@ def clear(evt):
 def startup():
     eqt = document["-eqt"].value
     size = document["-size"].value
-    scaling = document["-scaling"].value
 
     if eqt == 'default' or size == 'default':
         return None
