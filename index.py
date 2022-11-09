@@ -1,7 +1,7 @@
 import asciirenderer as asc
 import asciiplotter as ascp
 from browser import document, html
-
+print("Hello! https://github.com/tusharhero")
 def getequation(evt):
     equation = document["text-src"].value
     try:
