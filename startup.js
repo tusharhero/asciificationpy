@@ -2,32 +2,29 @@ function start()
 {
     const { searchParams } = new URL(window.location.href);
     
-    const inURL =
-    {
-        eqt: searchParams.get('eqt'),
-        size: searchParams.get('size')
-    };
-        
-    if (inURL.eqt !== null && inURL.size !== null)
-    {
-        document.getElementById('-eqt').value = inURL.eqt.split('plus').join('+');
-        document.getElementById('text-src').value = inURL.eqt.split('plus').join('+');
+    const display = searchParams.get('display');
 
-        document.getElementById('-size').value = inURL.size;
-        document.getElementById('size').value = inURL.size;
-    }
+    if (display === null) return;
+
+    const [eqt, size, scale] = atob(display).split('/|');
+
+    document.getElementById('-eqt').value = eqt;
+    document.getElementById('text-src').value = eqt;
+
+    document.getElementById('-size').value = size;
+    document.getElementById('size').value = size;
+
+    document.getElementById('-scale').value = scale;
+    document.getElementById('scaling').value = scale;
 };
 
 function submit()
 {
-    let eqt, size;
+    const eqt = document.getElementById('text-src').value;
+    const size = document.getElementById('size').value;
+    const scale = document.getElementById('scaling').value;
 
-    eqt = document.getElementById('text-src').value;
-    size = document.getElementById('size').value;
-
-    const param = `?eqt=${eqt.split('+').join('plus')}&size=${size}`;
-
-    window.history.replaceState('', '', param);
+    window.history.replaceState('', '', `?display=${btoa(`${eqt}/|${size}/|${scale}`)}`);
 };
 
 start();
