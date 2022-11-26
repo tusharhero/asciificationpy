@@ -27,7 +27,14 @@ function submit()
     window.history.replaceState('', '', `?display=${btoa(`${eqt}/|${size}/|${scale}`)}`);
 };
 
+function share()
+{
+    navigator.clipboard.writeText(document.URL)
+    .then(() => document.getElementById('error').innerText = '$ Link copied to clipboard!');    
+};
+
 start();
 
 document.getElementById('clear').addEventListener('click', () => window.history.replaceState('', '', '.'));
 document.getElementById('submit').addEventListener('click', submit);
+document.getElementById('share').addEventListener('click', share);
