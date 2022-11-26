@@ -22,12 +22,15 @@ def clear(evt):
 def startup():
     eqt = document["-eqt"].value
     size = document["-size"].value
+    scaling = document["-scale"].value
 
-    if eqt == 'default' or size == 'default':
+    if eqt == 'default' or size == 'default' or scaling == 'default':
         return None
 
     i = int(size)
-    graph = asc.getstring(ascp.plot(eqt, img=asc.createblankimg(i, i), s=scaling))
+    scale = int(scaling)
+
+    graph = asc.getstring(ascp.plot(eqt, img=asc.createblankimg(i, i), s=scale))
     document["box"].width = i
     document["output"].value = graph
     document["error"].html = "$ I am done plotting the equation shared to you!"
