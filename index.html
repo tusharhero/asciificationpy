@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <script src="javascript.js" defer></script>
-    <link rel="stylesheet" href="copy.css">
+    <link rel="stylesheet" href="modal.css">
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -60,5 +60,13 @@
     <input type="text" id="-eqt" value="default" style="display: none;">
     <input type="text" id="-size" value="default" style="display: none;">
     <input type="text" id="-scale" value="default" style="display: none;">
+
+    <div id="modalWrapper" style="display: none;">
+        <div id="modal">
+            <button id="modalClose">X</button>
+            <span>You cannot have the size value greater than </span>
+            <span id="-sizeLimit">250</span>
+        </div>
+    </div>
 </body>
 </html>
