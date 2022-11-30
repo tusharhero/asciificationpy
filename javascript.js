@@ -51,6 +51,6 @@ start();
 document.getElementById('clear').addEventListener('click', () => window.history.replaceState('', '', '.'));
 document.getElementById('submit').addEventListener('click', submit);
 document.getElementById('share').addEventListener('click', share);
-document.getElementById('modalClose').addEventListener('click', () => document.getElementById('modalWrapper').style.display = 'none');
 
+['modalClose', 'forcePlot'].forEach((x) => document.getElementById(x).addEventListener('click', () => document.getElementById('modalWrapper').style.display = 'none'));
 ['text-src', 'size', 'scaling'].forEach(x => document.getElementById(x).addEventListener('keydown', (E) => E.key === 'Enter' ? sizeLimit() : null));

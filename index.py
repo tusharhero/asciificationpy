@@ -3,6 +3,8 @@ import asciiplotter as ascp
 from browser import document, html
 print("Hello! https://github.com/tusharhero")
 
+SIZELIMIT = int(document["-sizeLimit"].innerHTML)
+
 def clear(evt):
     document["output"].value = ""
     document["error"].html = "$ I ate the graph"
@@ -13,25 +15,14 @@ def check():
     scaling = document["scaling"].value
 
     i = int(size)
-    scale = int(scaling)
+    scale = float(scaling)
 
-    if (i > 250):
+    if (i > SIZELIMIT):
         return False
     else:
         return [eqt, i, scale]
 
 def getequation(evt):
-    # equation = document["text-src"].value
-    # try:
-    #     size = int(document["size"].value)
-    #     scaling = float(document["scaling"].value)
-    #     graph = asc.getstring(ascp.plot(equation, img=asc.createblankimg(size, size), s=scaling))
-    #     document["error"].html = "$ checking"
-    #     document["box"].width = size
-    #     document["output"].value = graph
-    #     document["error"].html = "$ done!"
-    # except Exception as e:
-    #     document["error"].html = "$ " + str(e)
     checkData = check()
 
     if (checkData != False):
@@ -44,7 +35,17 @@ def getequation(evt):
         document["box"].width = size
         document["output"].value = graph
         document["error"].html = "$ done!"
-
+    
+def forcePlot():
+    equation = document["text-src"].value
+    size = int(document["size"].value)
+    scaling = float(document["scaling"].value)
+    graph = asc.getstring(ascp.plot(equation, img=asc.createblankimg(size, size), s=scaling))
+    document["error"].html = "$ checking"
+    document["box"].width = size
+    document["output"].value = graph
+    document["error"].html = "$ done!"
+    document["error"].html = "$ " + str(e)
 
 def startup():
 
@@ -66,5 +67,7 @@ def startup():
 document["submit"].bind("click", getequation)
 
 document["clear"].bind("click", clear)
+
+document["forcePlot"].bind("click", forcePlot)
 
 startup()
