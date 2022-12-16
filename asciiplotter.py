@@ -49,3 +49,23 @@ def point(a, b, x, y):
 
 def circle(x, y, r=1, a=0, b=0):
     return (x - a) ** 2 + (y - b) ** 2 <= r**2
+
+def triangle_val(x,y,a,b,c):
+    #formula
+    #https://math.stackexchange.com/questions/544559/is-there-any-equation-for-triangle
+    x1,x2,x3 = a[0], b[0], c[0]
+    y1,y2,y3 = a[1], b[1], c[1]
+    val =  max(\
+                (((y-y1)*(x2-x1)) - ((y2-y1)*(x-x1))),\
+                (((y-y2)*(x3-x2)) - ((y3-y2)*(x-x2))),\
+                (((y-y3)*(x1-x3)) - ((y1-y3)*(x-x3)))\
+                )
+    return val
+
+def triangle(x,y,a,b,c,rd=True):
+    val = triangle_val(x,y,a,b,c)
+    if rd:
+        eqn = (0 >= round(val))
+    else:
+        eqn = (0 >= val)
+    return eqn
